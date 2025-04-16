@@ -1,0 +1,27 @@
+database:
+  type: sqlite        # Или mysql, если используете MySQL
+  file: data.db       # Для SQLite: имя файла базы
+  # Для MySQL (если нужно):
+  # host: localhost
+  # port: 3306
+  # database: rankplugin
+  # username: user
+  # password: pass
+  initial-points: 100  # Начальное значение ранк‑очков
+
+points:
+  add: 5              # Количество очков, добавляемых убийцей
+  subtract: 5         # Количество очков, снимаемых с жертвы
+
+messages:
+  join: "&aДобро пожаловать, &e%player%&a! Ваш PTS: &e%score%&a."
+  kill: "&e%killer% &aзаработал &e%points_add%! Новый PTS: &e%killer_score%&a."
+  death: "&c%dead% &aпотерял &e%points_subtract%. Новый PTS: &e%dead_score%&a."
+  rank: "&aВаш текущий PTS: &e%score%&a."
+  reload: "&aRankPlugin перезагружен!"
+  usage_ranksystem: "&eИспользуйте: /ranksystem reload"
+  reset_usage: "&eИспользуйте: /reset <ник>"
+  reset_success: "&aPTS игрока %player% сброшен до %initial%."
+  reset_target: "&eВаш PTS был сброшен администратором до %initial%."
+  no_permission: "&cУ вас нет прав для использования этой команды."
+  db_error: "&cОшибка работы с базой данных: &e%error%&c."
